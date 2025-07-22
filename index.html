@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Omiye Precious | Portfolio</title>
+  <link rel="stylesheet" href="presh.css" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+<header class="navbar">
+  <div class="nav-container">
+    <div class="logo">Omiye Precious</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<header class="hero" id="home" data-aos="zoom-in">
+  <div class="hero-content">
+    <h1>👋 Hello, I'm <span class="highlight">Omiye Precious</span></h1>
+    <h2><span id="typing"></span></h2>
+    <button id="theme-toggle">🌙</button>
+    <a href="#about" class="scroll-down">↓</a>
+  </div>
+</header>
+
+
+  <main>
+    <section id="about">
+  <div class="container">
+    <h2>About Me</h2>
+    <p>
+      I'm Omiye Precious, a Front-End Developer and Designer based in Nigeria.
+      I specialize in building responsive and visually appealing websites using
+      HTML, CSS, JavaScript, React, and WordPress. I’m passionate about turning ideas
+      into elegant digital experiences.
+    </p>
+
+
+    <h3>My Skills</h3>
+    <div class="skills-grid" data-aos="fade-up" data-aos-delay="200">
+    <div class="skills-grid">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">React</div>
+      <div class="skill">Bootstrap</div>
+      <div class="skill">WordPress</div>
+    </div>
+  </div>
+</section>
+<section id="projects">
+<div class="project-cards">
+  <div class="project-card">
+    <h3>Personal Portfolio Website</h3>
+    <p>A responsive personal site with light/dark mode, animated sections, and integrated contact form.</p>
+    <a href="#" target="_blank">View Project</a>
+  </div>
+
+  <div class="project-card">
+    <h3>Product Landing Page</h3>
+    <p>A sleek landing page for a fictional SaaS product with call-to-action and testimonial sections.</p>
+     <a href="https://omiye-precious.github.io/Landing-page/" target="_blank">View Project</a>
+    <img src="/plp/landing page.png" alt="" style="max-width: 100%; border-radius: 8px; margin-top: 10px; height: 180PX;">
+  </div>
+
+  <div class="project-card">
+    <h3>To-Do List App</h3>
+    <p>A productivity app where users can create, check off, and delete tasks. Saved in local storage.</p>
+    <a href="https://omiye-precious.github.io/todo-app" target="_blank">View Project</a>
+    <img src="/todo app/todo.png" alt="" style="max-width: 100%; border-radius: 8px; margin-top: 10px;">
+  </div>
+
+  <div class="project-card">
+    <h3>Recipe Finder App</h3>
+    <p>Find and view delicious recipes from an open API based on any ingredient or keyword.</p>
+    <a href="#" target="_blank">View Project</a>
+  </div>
+
+  <div class="project-card">
+    <h3>Weather Forecast App</h3>
+    <p>Search any city and get live weather data with temperature, wind, and condition icons.</p>
+    <a href="#" target="_blank">View Project</a>
+  </div>
+
+  <div class="project-card">
+    <h3>Blog Template</h3>
+    <p>A clean and modern blog layout with article cards, read more pages, and category filtering.</p>
+    <a href="#" target="_blank">View Project</a>
+  </div>
+  <div class="project-card">
+    <h3>Quiz App</h3>
+     <p>An interactive quiz application with multiple-choice questions, score tracking, and instant feedback.</p>
+    <a href="https://omiye-precious.github.io/quiz-app/" target="_blank">View Project</a>
+     <img src="/quiz app/quiz.png" alt="" style="max-width: 100%; border-radius: 8px; margin-top: 10px;">
+  </div>
+</div>
+</section>
+
+
+<section id="contact">
+  <div class="container">
+    <h2>Contact Me</h2>
+    <section id="contact" data-aos="fade-up">
+
+    <p>If you'd like to collaborate, have a project idea, or just want to say hi — feel free to reach out!</p>
+    <div class="contact-links">
+      <a href="mailto:yourname@gmail.com">📧 preciousomiye2@gmail.com</a>
+      <a href="https://www.linkedin.com/in/omiye-precious" target="_blank">🔗 LinkedIn</a>
+      <a href="https://github.com/omiye-precious" target="_blank">🐙 GitHub</a>
+    </div>
+  </div>
+  <div class="contact-form">
+  <h3>Or Send Me a Message</h3>
+  <form action="https://formspree.io/f/mwpqpeyw" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="hidden" name="_captcha" value="false">
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</div>
+
+</section>
+
+
+
+  </main>
+ 
+
+
+  <footer>
+    <p>&copy; <span id="year"></span> Omiye Precious</p>
+  </footer>
+
+  <script src="presh.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script>
+  const contactForm = document.querySelector('.contact-form form');
+
+  contactForm.addEventListener('submit', function (e) {
+    // Delay clearing so the message goes through
+    setTimeout(() => {
+      contactForm.reset();
+    }, 1000); // 1 second delay to allow formspree to process
+  });
+</script>
+
+</body>
+</html>
